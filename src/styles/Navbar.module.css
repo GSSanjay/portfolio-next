@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.navCta {
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  color: #800080;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navButton {
+  background: #800080;
+  color: #fff;
+}
+
+.navCta:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #dd91dd;
+}
+
+.navLink:hover {
+  opacity: 0.9;
+}

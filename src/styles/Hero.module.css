@@ -1,0 +1,22 @@
+.container {
+  /* background: lime; */
+  /* display: flex; */
+  padding: 2rem;
+  /* justify-content: center; */
+  /* width: 50%; */
+}
+
+.textContainer {
+  /* width: 50%; */
+}
+
+.title {
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.details {
+  padding: 1rem;
+  text-align: center;
+}
