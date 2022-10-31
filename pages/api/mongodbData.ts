@@ -1,14 +1,13 @@
-import clientPromise from "../../lib/mongodb";
+import { WithId, Document } from "mongodb";
+import MongoClient from "../../lib/mongodb";
 
-export default async function handler(req, res) {
-  const client = await clientPromise;
+export default async function handler(
+  req: { method: any },
+  res: { json: (arg0: { status: number; data: WithId<Document>[] }) => void }
+) {
+  const client = await MongoClient;
   const db = client.db("nextjs-mongodb-demo");
   switch (req.method) {
-    case "POST":
-      let bodyObject = JSON.parse(req.body);
-      let myPost = await db.collection("posts").insertOne(bodyObject);
-      res.json(myPost.ops[0]);
-      break;
     case "GET":
       const allPosts = await db.collection("posts").find({}).toArray();
       res.json({ status: 200, data: allPosts });
