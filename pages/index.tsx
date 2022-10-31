@@ -16,7 +16,9 @@ export default function Home({ data }: ContactProps) {
 }
 
 export async function getServerSideProps() {
-  const response = await axios("http://localhost:3000/api/contact");
+  const response = await axios(
+    "https://main--fascinating-bonbon-6a9cdc.netlify.app/api/contact"
+  );
   const data = await response.data;
   return {
     props: {
