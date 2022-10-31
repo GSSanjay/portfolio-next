@@ -1,15 +1,9 @@
 import axios from "axios";
 
-export type ContactProps = {
-  data: {
-    name: string;
-  };
-};
-
-export const Contact = ({ data }: ContactProps) => {
+export const Contact = () => {
   return (
     <div id="contact">
-      <h1>{data.name}</h1>
+      <h1>SSG</h1>
     </div>
   );
 };

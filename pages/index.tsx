@@ -1,23 +1,27 @@
 import { Hero } from "../components/Hero/Hero";
 import { Navbar } from "../components/Navbar/Navbar";
-import { Contact, ContactProps } from "../components/Contact/Contact";
+import { Contact } from "../components/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
-import axios from "axios";
+// import axios from "axios";
+import { Post, PostsProps } from "../components/Post/Post";
 
-export default function Home({ data }: ContactProps) {
+import http from "./../lib/axiosCommon";
+
+export default function Home({ data }: PostsProps) {
   return (
     <div>
       <Navbar />
       <Hero />
-      <Contact data={data} />
+      <Contact />
+      <Post data={data} />
       <Footer />
     </div>
   );
 }
 
 export async function getServerSideProps() {
-  const response = await axios(
-    "https://main--fascinating-bonbon-6a9cdc.netlify.app/api/contact"
+  const response = await http.get(
+    "https://main--fascinating-bonbon-6a9cdc.netlify.app/api/mongodbData"
   );
   const data = await response.data;
   return {
