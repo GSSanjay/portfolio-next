@@ -22,7 +22,7 @@ export const Navbar = () => {
         duration={100}
         className={styles.navCta}
       >
-        Home
+        SSG Online
       </Link>
       <Link
         activeClass="active"
