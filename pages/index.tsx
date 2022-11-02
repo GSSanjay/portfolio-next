@@ -19,7 +19,7 @@ export default function Home({ data }: PostsProps) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const response = await http.get(
     "https://main--fascinating-bonbon-6a9cdc.netlify.app/api/mongodbData"
   );
