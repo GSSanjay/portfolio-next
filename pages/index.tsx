@@ -44,7 +44,7 @@ export default function Home({ data }: PostsProps) {
 
 export async function getServerSideProps() {
   const response = await http.get(
-    "https://main--fascinating-bonbon-6a9cdc.netlify.app/api/mongodbData"
+    "https://ssgonline.netlify.app/api/mongodbData"
   );
 
   const data = await response.data;
